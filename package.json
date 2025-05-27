@@ -2,11 +2,11 @@
   "name": "mvc-workspace",
   "version": "1.0.0",
   "description": "",
-  "main": "start.js",
+  "main": "Src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node start.js",
-    "dev": "nodemon start.js"
+    "start": "node Src/app.js",
+    "dev": "nodemon Src/app.js"
   },
   "engines": {
     "node": ">=18.0.0"
