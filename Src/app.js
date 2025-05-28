@@ -27,7 +27,7 @@ connectDB();
 
 // Routes
 const authRoutes = require("./routes/authRoutes");
-const adminRoutes = require("./routes/adminRoutes");
+const adminRoutes = require('./routes/AdminRoutes');
 const transportRequestRoutes = require("./routes/transportRequestRoutes");
 const transporterRoutes = require("./routes/transporterDetailsRoutes");
 
