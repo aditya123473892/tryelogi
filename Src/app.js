@@ -27,15 +27,13 @@ connectDB();
 
 // Routes
 const authRoutes = require("./routes/authRoutes");
-const adminRoutes = require('./routes/AdminRoutes');
 const transportRequestRoutes = require("./routes/transportRequestRoutes");
 const transporterRoutes = require("./routes/transporterDetailsRoutes");
 
 // Mount routes with more specific routes first
 app.use("/api/auth", authRoutes);
-app.use("/api/admin", adminRoutes);
 app.use("/api/transport-requests", transportRequestRoutes);
-app.use("/api", transporterRoutes); // Change this from "/api/transporter" to "/api"
+app.use("/api", transporterRoutes); // Handles transporter details
 
 // Add route not found handler
 app.use((req, res, next) => {
@@ -62,7 +60,6 @@ app.listen(PORT, () => {
 // Handle unhandled promise rejections
 process.on("unhandledRejection", (err) => {
   console.error("Unhandled Promise Rejection:", err);
-  // Close server & exit process
   process.exit(1);
 });
 
