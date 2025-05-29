@@ -27,13 +27,13 @@ connectDB();
 
 // Routes
 const authRoutes = require("./routes/authRoutes");
-const adminRoutes = require("./routes/adminRoutes");
+
 const transportRequestRoutes = require("./routes/transportRequestRoutes");
 const transporterRoutes = require("./routes/transporterDetailsRoutes");
 
 // Mount routes with more specific routes first
 app.use("/api/auth", authRoutes);
-app.use("/api/admin", adminRoutes);
+
 app.use("/api/transport-requests", transportRequestRoutes);
 app.use("/api", transporterRoutes); // Change this from "/api/transporter" to "/api"
 
